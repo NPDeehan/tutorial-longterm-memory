@@ -1,0 +1,42 @@
+{
+  "executionPlatform": "Camunda Cloud",
+  "executionPlatformVersion": "8.8.0",
+  "exporter": {
+    "name": "Camunda Web Modeler",
+    "version": "34b0162"
+  },
+  "schemaVersion": 19,
+  "id": "ask-question-to-human-1t7grmx",
+  "components": [
+    {
+      "text": "=questionForClerk",
+      "type": "text",
+      "layout": {
+        "row": "Row_0zp89ue",
+        "columns": null
+      },
+      "id": "Field_1ock0dg"
+    },
+    {
+      "label": "Answer From Clerk",
+      "type": "textarea",
+      "layout": {
+        "row": "Row_14m269u",
+        "columns": null
+      },
+      "id": "Field_0rvuae3",
+      "key": "humanAnswerToQuestion"
+    },
+    {
+      "label": "Store in Longterm Memory",
+      "type": "checkbox",
+      "layout": {
+        "row": "Row_0er0h1l",
+        "columns": null
+      },
+      "id": "Field_0nvhikw",
+      "key": "storeInMemory"
+    }
+  ],
+  "type": "default"
+}

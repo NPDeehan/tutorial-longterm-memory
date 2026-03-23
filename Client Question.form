@@ -1,0 +1,23 @@
+{
+  "executionPlatform": "Camunda Cloud",
+  "executionPlatformVersion": "8.8.0",
+  "exporter": {
+    "name": "Camunda Web Modeler",
+    "version": "6a26373"
+  },
+  "schemaVersion": 19,
+  "id": "client-question-0yflk3s",
+  "components": [
+    {
+      "label": "Tech Question From Client",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_0k3qkce",
+        "columns": null
+      },
+      "id": "Field_1rshwte",
+      "key": "questionFromClient"
+    }
+  ],
+  "type": "default"
+}

@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:zeebe="http://camunda.org/schema/zeebe/1.0" xmlns:modeler="http://camunda.org/schema/modeler/1.0" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="Definitions_1" targetNamespace="http://bpmn.io/schema/bpmn" exporter="Camunda Web Modeler" exporterVersion="4327945" modeler:executionPlatform="Camunda Cloud" modeler:executionPlatformVersion="8.8.0">
+  <bpmn:process id="LongTermMemory" name="Long Term Memory Agent Example" isExecutable="true">
+    <bpmn:extensionElements>
+      <zeebe:versionTag value="Final" />
+    </bpmn:extensionElements>
+    <bpmn:startEvent id="StartEvent_1" name="Client Question">
+      <bpmn:extensionElements>
+        <zeebe:formDefinition formId="client-question-0yflk3s" />
+      </bpmn:extensionElements>
+      <bpmn:outgoing>Flow_0o3mwoy</bpmn:outgoing>
+    </bpmn:startEvent>
+    <bpmn:endEvent id="Event_0k5z3dd" name="Client Question Answered">
+      <bpmn:incoming>Flow_0nku61u</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:sequenceFlow id="Flow_0nku61u" sourceRef="Activity_0srpldl" targetRef="Event_0k5z3dd" />
+    <bpmn:sequenceFlow id="Flow_0o3mwoy" sourceRef="StartEvent_1" targetRef="Activity_0srpldl" />
+    <bpmn:adHocSubProcess id="Activity_0srpldl" name="Tech Agent" zeebe:modelerTemplate="Template_02ypy9o" zeebe:modelerTemplateVersion="1" zeebe:modelerTemplateIcon="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIiIGhlaWdodD0iMzIiIHZpZXdCb3g9IjAgMCAzMiAzMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGNpcmNsZSBjeD0iMTYiIGN5PSIxNiIgcj0iMTYiIGZpbGw9IiNBNTZFRkYiLz4KPG1hc2sgaWQ9InBhdGgtMi1vdXRzaWRlLTFfMTg1XzYiIG1hc2tVbml0cz0idXNlclNwYWNlT25Vc2UiIHg9IjQiIHk9IjQiIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgZmlsbD0iYmxhY2siPgo8cmVjdCBmaWxsPSJ3aGl0ZSIgeD0iNCIgeT0iNCIgd2lkdGg9IjI0IiBoZWlnaHQ9IjI0Ii8+CjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNMjAuMDEwNSAxMi4wOTg3QzE4LjQ5IDEwLjU4OTQgMTcuMTU5NCA4LjEwODE0IDE2LjE3OTkgNi4wMTEwM0MxNi4xNTIgNi4wMDQ1MSAxNi4xMTc2IDYgMTYuMDc5NCA2QzE2LjA0MTEgNiAxNi4wMDY2IDYuMDA0NTEgMTUuOTc4OCA2LjAxMTA0QzE0Ljk5OTQgOC4xMDgxNCAxMy42Njk3IDEwLjU4ODkgMTIuMTQ4MSAxMi4wOTgxQzEwLjYyNjkgMTMuNjA3MSA4LjEyNTY4IDE0LjkyNjQgNi4wMTE1NyAxNS44OTgxQzYuMDA0NzQgMTUuOTI2MSA2IDE1Ljk2MTEgNiAxNkM2IDE2LjAzODcgNi4wMDQ2OCAxNi4wNzM2IDYuMDExNDQgMTYuMTAxNEM4LjEyNTE5IDE3LjA3MjkgMTAuNjI2MiAxOC4zOTE5IDEyLjE0NzcgMTkuOTAxNkMxMy42Njk3IDIxLjQxMDcgMTQuOTk5NiAyMy44OTIgMTUuOTc5MSAyNS45ODlDMTYuMDA2OCAyNS45OTU2IDE2LjA0MTEgMjYgMTYuMDc5MyAyNkMxNi4xMTc1IDI2IDE2LjE1MTkgMjUuOTk1NCAxNi4xNzk2IDI1Ljk4OUMxNy4xNTkxIDIzLjg5MiAxOC40ODg4IDIxLjQxMSAyMC4wMDk5IDE5LjkwMjFNMjAuMDA5OSAxOS45MDIxQzIxLjUyNTMgMTguMzk4NyAyMy45NDY1IDE3LjA2NjkgMjUuOTkxNSAxNi4wODI0QzI1Ljk5NjUgMTYuMDU5MyAyNiAxNi4wMzEgMjYgMTUuOTk5N0MyNiAxNS45Njg0IDI1Ljk5NjUgMTUuOTQwMyAyNS45OTE1IDE1LjkxNzFDMjMuOTQ3NCAxNC45MzI3IDIxLjUyNTkgMTMuNjAxIDIwLjAxMDUgMTIuMDk4NyIvPgo8L21hc2s+CjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNMjAuMDEwNSAxMi4wOTg3QzE4LjQ5IDEwLjU4OTQgMTcuMTU5NCA4LjEwODE0IDE2LjE3OTkgNi4wMTEwM0MxNi4xNTIgNi4wMDQ1MSAxNi4xMTc2IDYgMTYuMDc5NCA2QzE2LjA0MTEgNiAxNi4wMDY2IDYuMDA0NTEgMTUuOTc4OCA2LjAxMTA0QzE0Ljk5OTQgOC4xMDgxNCAxMy42Njk3IDEwLjU4ODkgMTIuMTQ4MSAxMi4wOTgxQzEwLjYyNjkgMTMuNjA3MSA4LjEyNTY4IDE0LjkyNjQgNi4wMTE1NyAxNS44OTgxQzYuMDA0NzQgMTUuOTI2MSA2IDE1Ljk2MTEgNiAxNkM2IDE2LjAzODcgNi4wMDQ2OCAxNi4wNzM2IDYuMDExNDQgMTYuMTAxNEM4LjEyNTE5IDE3LjA3MjkgMTAuNjI2MiAxOC4zOTE5IDEyLjE0NzcgMTkuOTAxNkMxMy42Njk3IDIxLjQxMDcgMTQuOTk5NiAyMy44OTIgMTUuOTc5MSAyNS45ODlDMTYuMDA2OCAyNS45OTU2IDE2LjA0MTEgMjYgMTYuMDc5MyAyNkMxNi4xMTc1IDI2IDE2LjE1MTkgMjUuOTk1NCAxNi4xNzk2IDI1Ljk4OUMxNy4xNTkxIDIzLjg5MiAxOC40ODg4IDIxLjQxMSAyMC4wMDk5IDE5LjkwMjFNMjAuMDA5OSAxOS45MDIxQzIxLjUyNTMgMTguMzk4NyAyMy45NDY1IDE3LjA2NjkgMjUuOTkxNSAxNi4wODI0QzI1Ljk5NjUgMTYuMDU5MyAyNiAxNi4wMzEgMjYgMTUuOTk5N0MyNiAxNS45Njg0IDI1Ljk5NjUgMTUuOTQwMyAyNS45OTE1IDE1LjkxNzFDMjMuOTQ3NCAxNC45MzI3IDIxLjUyNTkgMTMuNjAxIDIwLjAxMDUgMTIuMDk4NyIgZmlsbD0id2hpdGUiLz4KPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0yMC4wMTA1IDEyLjA5ODdDMTguNDkgMTAuNTg5NCAxNy4xNTk0IDguMTA4MTQgMTYuMTc5OSA2LjAxMTAzQzE2LjE1MiA2LjAwNDUxIDE2LjExNzYgNiAxNi4wNzk0IDZDMTYuMDQxMSA2IDE2LjAwNjYgNi4wMDQ1MSAxNS45Nzg4IDYuMDExMDRDMTQuOTk5NCA4LjEwODE0IDEzLjY2OTcgMTAuNTg4OSAxMi4xNDgxIDEyLjA5ODFDMTAuNjI2OSAxMy42MDcxIDguMTI1NjggMTQuOTI2NCA2LjAxMTU3IDE1Ljg5ODFDNi4wMDQ3NCAxNS45MjYxIDYgMTUuOTYxMSA2IDE2QzYgMTYuMDM4NyA2LjAwNDY4IDE2LjA3MzYgNi4wMTE0NCAxNi4xMDE0QzguMTI1MTkgMTcuMDcyOSAxMC42MjYyIDE4LjM5MTkgMTIuMTQ3NyAxOS45MDE2QzEzLjY2OTcgMjEuNDEwNyAxNC45OTk2IDIzLjg5MiAxNS45NzkxIDI1Ljk4OUMxNi4wMDY4IDI1Ljk5NTYgMTYuMDQxMSAyNiAxNi4wNzkzIDI2QzE2LjExNzUgMjYgMTYuMTUxOSAyNS45OTU0IDE2LjE3OTYgMjUuOTg5QzE3LjE1OTEgMjMuODkyIDE4LjQ4ODggMjEuNDExIDIwLjAwOTkgMTkuOTAyMU0yMC4wMDk5IDE5LjkwMjFDMjEuNTI1MyAxOC4zOTg3IDIzLjk0NjUgMTcuMDY2OSAyNS45OTE1IDE2LjA4MjRDMjUuOTk2NSAxNi4wNTkzIDI2IDE2LjAzMSAyNiAxNS45OTk3QzI2IDE1Ljk2ODQgMjUuOTk2NSAxNS45NDAzIDI1Ljk5MTUgMTUuOTE3MUMyMy45NDc0IDE0LjkzMjcgMjEuNTI1OSAxMy42MDEgMjAuMDEwNSAxMi4wOTg3IiBzdHJva2U9IiM0OTFEOEIiIHN0cm9rZS13aWR0aD0iNCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgbWFzaz0idXJsKCNwYXRoLTItb3V0c2lkZS0xXzE4NV82KSIvPgo8L3N2Zz4K">
+      <bpmn:extensionElements>
+        <zeebe:taskDefinition type="io.camunda.agenticai:aiagent-job-worker:1" retries="3" />
+        <zeebe:ioMapping>
+          <zeebe:input source="bedrock" target="provider.type" />
+          <zeebe:input source="{{secrets.AWS_REGION}}" target="provider.bedrock.region" />
+          <zeebe:input source="credentials" target="provider.bedrock.authentication.type" />
+          <zeebe:input source="{{secrets.AWS_ACCESS_KEY }}" target="provider.bedrock.authentication.accessKey" />
+          <zeebe:input source="{{secrets.AWS_SECRET_KEY}}" target="provider.bedrock.authentication.secretKey" />
+          <zeebe:input source="us.anthropic.claude-sonnet-4-20250514-v1:0" target="provider.bedrock.model.model" />
+          <zeebe:input source="=&#34;You are **TaskAgent**, a helpful, incredibly up-beat agent who&#39;s always interested in the people you interact with. offering encouragment etc. you handel a wide variety of client requests using your own domain knowledge **and** any tools explicitly provided to you at runtime.&#10;&#10;Your goal is to take in a question from a client and use the tools provided to try to answer that user. The scope of the questions from the client are going to be about what the current stock of tech items are and how they can obtain get some and if they&#39;re entitled to them. &#10;&#10;The only way the user will see your response is by triggering the tools provided&#10;&#10;You must always prefer asking systems of record before you contact any humans. &#10;It&#39;s very likely that the client will have followup questions, you should continue to help them until they&#39;ve expressed that they are satisfied or if you feel you&#39;ve answered all of their questions&#10;&#10;Tools are provided, you should prefer them instead of guessing an answer. You can call the same tool multiple times by providing different input values. Don&#39;t guess any tools which were not explicitly configured. If no tool matches the request, try to generate an answer. If you&#39;re not able to find a good answer, return with a message stating why you&#39;re not able to.&#10;&#10;Wrap minimal, inspectable reasoning in *exactly* this template:&#10;&#10;--thinking--&#10;--context--…briefly state the customer’s need and current state…--context--&#10;--reflection--…list candidate tools, justify which you will call next and why… You should also suggest tools you intend to use later and why you need to delay the execution--reflection--&#10;--thinking--&#10;&#10;Reveal **no** additional private reasoning outside these tags.&#34;" target="data.systemPrompt.prompt" />
+          <zeebe:input source="=questionFromClient" target="data.userPrompt.prompt" />
+          <zeebe:input target="agentContext" />
+          <zeebe:input source="in-process" target="data.memory.storage.type" />
+          <zeebe:input source="=20" target="data.memory.contextWindowSize" />
+          <zeebe:input source="=10" target="data.limits.maxModelCalls" />
+          <zeebe:input source="WAIT_FOR_TOOL_CALL_RESULTS" target="data.events.behavior" />
+          <zeebe:input source="text" target="data.response.format.type" />
+          <zeebe:input source="=false" target="data.response.format.parseJson" />
+          <zeebe:input source="=false" target="data.response.includeAssistantMessage" />
+          <zeebe:input source="=false" target="data.response.includeAgentContext" />
+          <zeebe:output source="=agent" target="agent" />
+        </zeebe:ioMapping>
+        <zeebe:taskHeaders>
+          <zeebe:header key="elementTemplateVersion" value="5" />
+          <zeebe:header key="elementTemplateId" value="io.camunda.connectors.agenticai.aiagent.jobworker.v1" />
+          <zeebe:header key="retryBackoff" value="PT0S" />
+        </zeebe:taskHeaders>
+        <zeebe:adHoc outputCollection="toolCallResults" outputElement="={&#10;  id: toolCall._meta.id,&#10;  name: toolCall._meta.name,&#10;  content: toolCallResult&#10;}" />
+      </bpmn:extensionElements>
+      <bpmn:incoming>Flow_0o3mwoy</bpmn:incoming>
+      <bpmn:outgoing>Flow_0nku61u</bpmn:outgoing>
+      <bpmn:userTask id="Activity_1a744kr" name="Answer to Client">
+        <bpmn:documentation>You can use this tool to answer the question posed by the client or to ask the client for clarification on their request. You can expect followup responses from the client to come back from this.</bpmn:documentation>
+        <bpmn:extensionElements>
+          <zeebe:userTask />
+          <zeebe:ioMapping>
+            <zeebe:input source="=fromAi(toolCall.answerForClient, &#34;This is the answer to the question posed by the client. format in markdown&#34;)" target="answerforClient" />
+            <zeebe:output source="={&#10;  &#34;followupQuestion&#34; : followupQuestion&#10;}" target="toolCallResult" />
+          </zeebe:ioMapping>
+          <zeebe:formDefinition formId="answer-to-client-0audv21" />
+        </bpmn:extensionElements>
+      </bpmn:userTask>
+      <bpmn:userTask id="Activity_0i8mode" name="Ask the Clerk">
+        <bpmn:documentation>Use this tool to ask a human to answer any questions you have about the company or the products on offer.</bpmn:documentation>
+        <bpmn:extensionElements>
+          <zeebe:userTask />
+          <zeebe:formDefinition formId="ask-question-to-human-1t7grmx" />
+          <zeebe:ioMapping>
+            <zeebe:input source="=fromAi(toolCall.questionForClerk, &#34;This is the question for the human clerk to answer. format in markdown&#34;)" target="questionForClerk" />
+            <zeebe:output source="={&#10;  &#34;answerToQuestion&#34; : humanAnswerToQuestion&#10;}" target="toolCallResult" />
+            <zeebe:output source="=storeInMemory" target="storeInMemory" />
+          </zeebe:ioMapping>
+        </bpmn:extensionElements>
+        <bpmn:outgoing>Flow_1pan8av</bpmn:outgoing>
+      </bpmn:userTask>
+      <bpmn:intermediateThrowEvent id="Event_0qhoybk">
+        <bpmn:incoming>Flow_0rgsv4i</bpmn:incoming>
+      </bpmn:intermediateThrowEvent>
+      <bpmn:boundaryEvent id="Event_13nfdh6" attachedToRef="Activity_1ftg0az">
+        <bpmn:extensionElements>
+          <zeebe:ioMapping>
+            <zeebe:output source="={&#10;  &#34;searchResult&#34; :&#34;Nothing was found&#34;&#10;}" target="toolCallResult" />
+          </zeebe:ioMapping>
+        </bpmn:extensionElements>
+        <bpmn:errorEventDefinition id="ErrorEventDefinition_0pwwn88" />
+      </bpmn:boundaryEvent>
+      <bpmn:sequenceFlow id="Flow_1pan8av" sourceRef="Activity_0i8mode" targetRef="Gateway_1htoy4p" />
+      <bpmn:serviceTask id="Activity_0wyutvr" name="List of Tech stuff" zeebe:modelerTemplate="io.camunda.connectors.HttpJson.v2" zeebe:modelerTemplateVersion="12" zeebe:modelerTemplateIcon="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTgiIGhlaWdodD0iMTgiIHZpZXdCb3g9IjAgMCAxOCAxOCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTE3LjAzMzUgOC45OTk5N0MxNy4wMzM1IDEzLjQ0NzUgMTMuNDI4MSAxNy4wNTI5IDguOTgwNjUgMTcuMDUyOUM0LjUzMzE2IDE3LjA1MjkgMC45Mjc3NjUgMTMuNDQ3NSAwLjkyNzc2NSA4Ljk5OTk3QzAuOTI3NzY1IDQuNTUyNDggNC41MzMxNiAwLjk0NzA4MyA4Ljk4MDY1IDAuOTQ3MDgzQzEzLjQyODEgMC45NDcwODMgMTcuMDMzNSA0LjU1MjQ4IDE3LjAzMzUgOC45OTk5N1oiIGZpbGw9IiM1MDU1NjIiLz4KPHBhdGggZD0iTTQuOTMxMjYgMTQuMTU3MUw2Ljc4MTA2IDMuNzE0NzFIMTAuMTM3NUMxMS4xOTE3IDMuNzE0NzEgMTEuOTgyNCAzLjk4MzIzIDEyLjUwOTUgNC41MjAyN0MxMy4wNDY1IDUuMDQ3MzYgMTMuMzE1IDUuNzMzNTggMTMuMzE1IDYuNTc4OTJDMTMuMzE1IDcuNDQ0MTQgMTMuMDcxNCA4LjE1NTIyIDEyLjU4NDEgOC43MTIxNUMxMi4xMDY3IDkuMjU5MTMgMTEuNDU1MyA5LjYzNzA1IDEwLjYyOTggOS44NDU5TDEyLjA2MTkgMTQuMTU3MUgxMC4zMzE1TDkuMDMzNjQgMTAuMDI0OUg3LjI0MzUxTDYuNTEyNTQgMTQuMTU3MUg0LjkzMTI2Wk03LjQ5NzExIDguNTkyODFIOS4yNDI0OEM5Ljk5ODMyIDguNTkyODEgMTAuNTkwMSA4LjQyMzc0IDExLjAxNzcgOC4wODU2MUMxMS40NTUzIDcuNzM3NTMgMTEuNjc0MSA3LjI2NTEzIDExLjY3NDEgNi42Njg0MkMxMS42NzQxIDYuMTkxMDYgMTEuNTI0OSA1LjgxODExIDExLjIyNjUgNS41NDk1OUMxMC45MjgyIDUuMjcxMTMgMTAuNDU1OCA1LjEzMTkgOS44MDkzNiA1LjEzMTlIOC4xMDg3NEw3LjQ5NzExIDguNTkyODFaIiBmaWxsPSJ3aGl0ZSIvPgo8L3N2Zz4K">
+        <bpmn:documentation>Use this tool to get a list of available tech stuff.</bpmn:documentation>
+        <bpmn:extensionElements>
+          <zeebe:taskDefinition type="io.camunda:http-json:1" retries="3" />
+          <zeebe:ioMapping>
+            <zeebe:input source="noAuth" target="authentication.type" />
+            <zeebe:input source="GET" target="method" />
+            <zeebe:input source="https://api.restful-api.dev/objects" target="url" />
+            <zeebe:input source="=false" target="storeResponse" />
+            <zeebe:input source="=20" target="connectionTimeoutInSeconds" />
+            <zeebe:input source="=20" target="readTimeoutInSeconds" />
+          </zeebe:ioMapping>
+          <zeebe:taskHeaders>
+            <zeebe:header key="elementTemplateVersion" value="12" />
+            <zeebe:header key="elementTemplateId" value="io.camunda.connectors.HttpJson.v2" />
+            <zeebe:header key="resultVariable" value="toolCallResult" />
+            <zeebe:header key="retryBackoff" value="PT0S" />
+          </zeebe:taskHeaders>
+        </bpmn:extensionElements>
+      </bpmn:serviceTask>
+      <bpmn:sequenceFlow id="Flow_0rgsv4i" name="No" sourceRef="Gateway_1htoy4p" targetRef="Event_0qhoybk">
+        <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">=not(storeInMemory)</bpmn:conditionExpression>
+      </bpmn:sequenceFlow>
+      <bpmn:serviceTask id="Activity_1ftg0az" name="Query for Policy Stuff" zeebe:modelerTemplate="Template_148eei5" zeebe:modelerTemplateVersion="1" zeebe:modelerTemplateIcon="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTEyIiBoZWlnaHQ9IjUxMiIgdmlld0JveD0iMCAwIDUxMiA1MTIiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSI1MTIiIGhlaWdodD0iNTEyIiBmaWxsPSJ3aGl0ZSIgZmlsbC1vcGFjaXR5PSIwLjAxIiBzdHlsZT0ibWl4LWJsZW5kLW1vZGU6bXVsdGlwbHkiLz4KPHBhdGggZD0iTTI1NS45OTkgMTM2LjcwMkMxOTMuMzE4IDEzNi43MDIgMTI1Ljg1NSAxNTEuNDg1IDEyNS44NTUgMTgzLjkzM1YzOTYuNDc1QzEyNS44NTUgNDI4LjkyMyAxOTMuMzE4IDQ0My43MDcgMjU1Ljk5OSA0NDMuNzA3QzMxOC42NzkgNDQzLjcwNyAzODYuMTQyIDQyOC45MjMgMzg2LjE0MiAzOTYuNDc1VjE4My45MzNDMzg2LjE0MiAxNTEuNDg1IDMxOC42NzkgMTM2LjcwMiAyNTUuOTk5IDEzNi43MDJaTTI1NS45OTkgMTYwLjMxOEMzMjQuNTkxIDE2MC4zMTggMzYwLjA1MyAxNzcuMjUxIDM2Mi40NDIgMTgzLjkzM0MzNjAuMDUzIDE5MC42MTUgMzI0LjU5MSAyMDcuNTQ5IDI1NS45OTkgMjA3LjU0OUMxODYuODg5IDIwNy41NDkgMTUxLjQxOCAxOTAuMzYyIDE0OS41MTggMTg0LjE0MVYxODQuMDgzQzE1MS40MTggMTc3LjUwNSAxODYuODg5IDE2MC4zMTggMjU1Ljk5OSAxNjAuMzE4Wk0xNDkuNTE4IDIxMi41OTlDMTc0LjY5NCAyMjUuMjAzIDIxNi4yNzcgMjMxLjE2NSAyNTUuOTk5IDIzMS4xNjVDMjk1LjcyMSAyMzEuMTY1IDMzNy4zMDQgMjI1LjIwMyAzNjIuNDggMjEyLjU5OVYyNTQuNjMxQzM2MC41OCAyNjEuMjA5IDMyNS4xMDggMjc4LjM5NiAyNTUuOTk5IDI3OC4zOTZDMTg2Ljc4NSAyNzguMzk2IDE1MS4zMDMgMjYxLjE1NyAxNDkuNTE4IDI1NC43ODFWMjEyLjU5OVpNMTQ5LjUxOCAyODMuNDQ3QzE3NC42OTQgMjk2LjA1IDIxNi4yNzcgMzAyLjAxMiAyNTUuOTk5IDMwMi4wMTJDMjk1LjcyMSAzMDIuMDEyIDMzNy4zMDQgMjk2LjA1IDM2Mi40OCAyODMuNDQ3VjMyNS40NzhDMzYwLjU4IDMzMi4wNTYgMzI1LjEwOCAzNDkuMjQ0IDI1NS45OTkgMzQ5LjI0NEMxODYuNzg1IDM0OS4yNDQgMTUxLjMwMyAzMzIuMDA0IDE0OS41MTggMzI1LjYyOFYyODMuNDQ3Wk0yNTUuOTk5IDQyMC4wOTFDMTg2Ljc4NSA0MjAuMDkxIDE1MS4zMDMgNDAyLjg1MSAxNDkuNTE4IDM5Ni40NzVWMzU0LjI5NEMxNzQuNjk0IDM2Ni44OTggMjE2LjI3NyAzNzIuODU5IDI1NS45OTkgMzcyLjg1OUMyOTUuNzIxIDM3Mi44NTkgMzM3LjMwNCAzNjYuODk4IDM2Mi40OCAzNTQuMjk0VjM5Ni4zMjVDMzYwLjU4IDQwMi45MDMgMzI1LjEwOCA0MjAuMDkxIDI1NS45OTkgNDIwLjA5MVoiIGZpbGw9IiNGQzVEMEQiIHN0cm9rZT0iI0ZDNUQwRCIgc3Ryb2tlLXdpZHRoPSI2LjY3NDAyIi8+CjxwYXRoIGQ9Ik0zODcuODYgMzk5Ljg4M0wzNzQuNTMxIDQxMy4yMTFMNDQ2Ljg4NiA0ODUuNTY2SDM4NC4wNTJWNTA0LjYwN0g0NzkuMjU2VjQwOS40MDNINDYwLjIxNVY0NzIuMjM4TDM4Ny44NiAzOTkuODgzWiIgZmlsbD0iI0ZDNUQwRCIgc3Ryb2tlPSIjRkM1RDBEIiBzdHJva2Utd2lkdGg9IjguMzQyNTIiLz4KPHBhdGggZD0iTTEyNC4xMzggMzk5Ljg4M0wxMzcuNDY3IDQxMy4yMTFMNjUuMTExNiA0ODUuNTY2SDEyNy45NDZWNTA0LjYwN0gzMi43NDIyVjQwOS40MDNINTEuNzgzVjQ3Mi4yMzhMMTI0LjEzOCAzOTkuODgzWiIgZmlsbD0iI0ZDNUQwRCIgc3Ryb2tlPSIjRkM1RDBEIiBzdHJva2Utd2lkdGg9IjguMzQyNTIiLz4KPHBhdGggZD0iTTI0Ni41NzUgMTQ2LjA3MUgyNjUuNDI1VjQzLjc0NTNMMzA5Ljg1NiA4OC4xNzYxTDMyMy4zMTkgNzQuNzEyMkwyNTYgNy4zOTI4MkwxODguNjgxIDc0LjcxMjJMMjAyLjE0NCA4OC4xNzYxTDI0Ni41NzUgNDMuNzQ1M1YxNDYuMDcxWiIgZmlsbD0iI0ZDNUQwRCIgc3Ryb2tlPSIjRkM1RDBEIiBzdHJva2Utd2lkdGg9IjguMzQyNTIiLz4KPC9zdmc+Cg==">
+        <bpmn:documentation>Use this tool in order to get any information on policy or company or product specific questions you might have.</bpmn:documentation>
+        <bpmn:extensionElements>
+          <zeebe:taskDefinition type="io.camunda:embeddings-vector-database:1" retries="0" />
+          <zeebe:ioMapping>
+            <zeebe:input source="retrieveDocumentOperation" target="vectorDatabaseConnectorOperation.operationType" />
+            <zeebe:input source="=fromAi(toolCall.query, &#34;This is the query you&#39;re making to the vector database&#34;)" target="vectorDatabaseConnectorOperation.query" />
+            <zeebe:input source="=5" target="vectorDatabaseConnectorOperation.documentLimit" />
+            <zeebe:input source="bedrockModelProvider" target="embeddingModelProvider.modelProvider" />
+            <zeebe:input source="{{secrets.AWS_ACCESS_KEY}}" target="embeddingModelProvider.bedrock.accessKey" />
+            <zeebe:input source="{{secrets.AWS_SECRET_KEY}}" target="embeddingModelProvider.bedrock.secretKey" />
+            <zeebe:input source="{{secrets.AWS_REGION}}" target="embeddingModelProvider.bedrock.region" />
+            <zeebe:input source="TitanEmbedTextV2" target="embeddingModelProvider.bedrock.modelName" />
+            <zeebe:input source="D1024" target="embeddingModelProvider.bedrock.dimensions" />
+            <zeebe:input source="=false" target="embeddingModelProvider.bedrock.normalize" />
+            <zeebe:input source="=3" target="embeddingModelProvider.bedrock.maxRetries" />
+            <zeebe:input source="amazonManagedOpenSearchStore" target="vectorStore.storeType" />
+            <zeebe:input source="{{secrets.AWS_VECTOR_ACCESS}}" target="vectorStore.amazonManagedOpensearch.accessKey" />
+            <zeebe:input source="{{secrets.AWS_VECTOR_SECRET}}" target="vectorStore.amazonManagedOpensearch.secretKey" />
+            <zeebe:input source="{{secrets.AWS_LONGTERM_MEM}}" target="vectorStore.amazonManagedOpensearch.serverUrl" />
+            <zeebe:input source="{{secrets.AWS_REGION}}" target="vectorStore.amazonManagedOpensearch.region" />
+            <zeebe:input source="=&#34;tech-stuff-knowagebase&#34;" target="vectorStore.amazonManagedOpensearch.indexName" />
+          </zeebe:ioMapping>
+          <zeebe:taskHeaders>
+            <zeebe:header key="elementTemplateVersion" value="2" />
+            <zeebe:header key="elementTemplateId" value="io.camunda.connectors.EmbeddingsVectorDB.v1" />
+            <zeebe:header key="resultVariable" value="toolCallResult" />
+            <zeebe:header key="errorExpression" value="=if contains(error.message, &#34;index_not_found&#34;) then bpmnError(&#34;index_not_found&#34;, &#34;The index does not exist&#34;) else null" />
+            <zeebe:header key="retryBackoff" value="PT0S" />
+          </zeebe:taskHeaders>
+        </bpmn:extensionElements>
+      </bpmn:serviceTask>
+      <bpmn:exclusiveGateway id="Gateway_1htoy4p" name="Store in memory">
+        <bpmn:incoming>Flow_1pan8av</bpmn:incoming>
+        <bpmn:outgoing>Flow_1d4blt1</bpmn:outgoing>
+        <bpmn:outgoing>Flow_0rgsv4i</bpmn:outgoing>
+      </bpmn:exclusiveGateway>
+      <bpmn:sequenceFlow id="Flow_1d4blt1" name="Yes" sourceRef="Gateway_1htoy4p" targetRef="Activity_1kck85z">
+        <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">=storeInMemory</bpmn:conditionExpression>
+      </bpmn:sequenceFlow>
+      <bpmn:serviceTask id="Activity_1kck85z" name="Store in memory" zeebe:modelerTemplate="Template_144nwad" zeebe:modelerTemplateVersion="1" zeebe:modelerTemplateIcon="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTEyIiBoZWlnaHQ9IjUxMiIgdmlld0JveD0iMCAwIDUxMiA1MTIiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSI1MTIiIGhlaWdodD0iNTEyIiBmaWxsPSJ3aGl0ZSIgZmlsbC1vcGFjaXR5PSIwLjAxIiBzdHlsZT0ibWl4LWJsZW5kLW1vZGU6bXVsdGlwbHkiLz4KPHBhdGggZD0iTTI1NS45OTkgMTM2LjcwMkMxOTMuMzE4IDEzNi43MDIgMTI1Ljg1NSAxNTEuNDg1IDEyNS44NTUgMTgzLjkzM1YzOTYuNDc1QzEyNS44NTUgNDI4LjkyMyAxOTMuMzE4IDQ0My43MDcgMjU1Ljk5OSA0NDMuNzA3QzMxOC42NzkgNDQzLjcwNyAzODYuMTQyIDQyOC45MjMgMzg2LjE0MiAzOTYuNDc1VjE4My45MzNDMzg2LjE0MiAxNTEuNDg1IDMxOC42NzkgMTM2LjcwMiAyNTUuOTk5IDEzNi43MDJaTTI1NS45OTkgMTYwLjMxOEMzMjQuNTkxIDE2MC4zMTggMzYwLjA1MyAxNzcuMjUxIDM2Mi40NDIgMTgzLjkzM0MzNjAuMDUzIDE5MC42MTUgMzI0LjU5MSAyMDcuNTQ5IDI1NS45OTkgMjA3LjU0OUMxODYuODg5IDIwNy41NDkgMTUxLjQxOCAxOTAuMzYyIDE0OS41MTggMTg0LjE0MVYxODQuMDgzQzE1MS40MTggMTc3LjUwNSAxODYuODg5IDE2MC4zMTggMjU1Ljk5OSAxNjAuMzE4Wk0xNDkuNTE4IDIxMi41OTlDMTc0LjY5NCAyMjUuMjAzIDIxNi4yNzcgMjMxLjE2NSAyNTUuOTk5IDIzMS4xNjVDMjk1LjcyMSAyMzEuMTY1IDMzNy4zMDQgMjI1LjIwMyAzNjIuNDggMjEyLjU5OVYyNTQuNjMxQzM2MC41OCAyNjEuMjA5IDMyNS4xMDggMjc4LjM5NiAyNTUuOTk5IDI3OC4zOTZDMTg2Ljc4NSAyNzguMzk2IDE1MS4zMDMgMjYxLjE1NyAxNDkuNTE4IDI1NC43ODFWMjEyLjU5OVpNMTQ5LjUxOCAyODMuNDQ3QzE3NC42OTQgMjk2LjA1IDIxNi4yNzcgMzAyLjAxMiAyNTUuOTk5IDMwMi4wMTJDMjk1LjcyMSAzMDIuMDEyIDMzNy4zMDQgMjk2LjA1IDM2Mi40OCAyODMuNDQ3VjMyNS40NzhDMzYwLjU4IDMzMi4wNTYgMzI1LjEwOCAzNDkuMjQ0IDI1NS45OTkgMzQ5LjI0NEMxODYuNzg1IDM0OS4yNDQgMTUxLjMwMyAzMzIuMDA0IDE0OS41MTggMzI1LjYyOFYyODMuNDQ3Wk0yNTUuOTk5IDQyMC4wOTFDMTg2Ljc4NSA0MjAuMDkxIDE1MS4zMDMgNDAyLjg1MSAxNDkuNTE4IDM5Ni40NzVWMzU0LjI5NEMxNzQuNjk0IDM2Ni44OTggMjE2LjI3NyAzNzIuODU5IDI1NS45OTkgMzcyLjg1OUMyOTUuNzIxIDM3Mi44NTkgMzM3LjMwNCAzNjYuODk4IDM2Mi40OCAzNTQuMjk0VjM5Ni4zMjVDMzYwLjU4IDQwMi45MDMgMzI1LjEwOCA0MjAuMDkxIDI1NS45OTkgNDIwLjA5MVoiIGZpbGw9IiNGQzVEMEQiIHN0cm9rZT0iI0ZDNUQwRCIgc3Ryb2tlLXdpZHRoPSI2LjY3NDAyIi8+CjxwYXRoIGQ9Ik0zODcuODYgMzk5Ljg4M0wzNzQuNTMxIDQxMy4yMTFMNDQ2Ljg4NiA0ODUuNTY2SDM4NC4wNTJWNTA0LjYwN0g0NzkuMjU2VjQwOS40MDNINDYwLjIxNVY0NzIuMjM4TDM4Ny44NiAzOTkuODgzWiIgZmlsbD0iI0ZDNUQwRCIgc3Ryb2tlPSIjRkM1RDBEIiBzdHJva2Utd2lkdGg9IjguMzQyNTIiLz4KPHBhdGggZD0iTTEyNC4xMzggMzk5Ljg4M0wxMzcuNDY3IDQxMy4yMTFMNjUuMTExNiA0ODUuNTY2SDEyNy45NDZWNTA0LjYwN0gzMi43NDIyVjQwOS40MDNINTEuNzgzVjQ3Mi4yMzhMMTI0LjEzOCAzOTkuODgzWiIgZmlsbD0iI0ZDNUQwRCIgc3Ryb2tlPSIjRkM1RDBEIiBzdHJva2Utd2lkdGg9IjguMzQyNTIiLz4KPHBhdGggZD0iTTI0Ni41NzUgMTQ2LjA3MUgyNjUuNDI1VjQzLjc0NTNMMzA5Ljg1NiA4OC4xNzYxTDMyMy4zMTkgNzQuNzEyMkwyNTYgNy4zOTI4MkwxODguNjgxIDc0LjcxMjJMMjAyLjE0NCA4OC4xNzYxTDI0Ni41NzUgNDMuNzQ1M1YxNDYuMDcxWiIgZmlsbD0iI0ZDNUQwRCIgc3Ryb2tlPSIjRkM1RDBEIiBzdHJva2Utd2lkdGg9IjguMzQyNTIiLz4KPC9zdmc+Cg==">
+        <bpmn:extensionElements>
+          <zeebe:taskDefinition type="io.camunda:embeddings-vector-database:1" retries="0" />
+          <zeebe:ioMapping>
+            <zeebe:input source="embedDocumentOperation" target="vectorDatabaseConnectorOperation.operationType" />
+            <zeebe:input source="bedrockModelProvider" target="embeddingModelProvider.modelProvider" />
+            <zeebe:input source="{{secrets.AWS_ACCESS_KEY}}" target="embeddingModelProvider.bedrock.accessKey" />
+            <zeebe:input source="{{secrets.AWS_SECRET_KEY}}" target="embeddingModelProvider.bedrock.secretKey" />
+            <zeebe:input source="{{secrets.AWS_REGION}}" target="embeddingModelProvider.bedrock.region" />
+            <zeebe:input source="TitanEmbedTextV2" target="embeddingModelProvider.bedrock.modelName" />
+            <zeebe:input source="D1024" target="embeddingModelProvider.bedrock.dimensions" />
+            <zeebe:input source="=false" target="embeddingModelProvider.bedrock.normalize" />
+            <zeebe:input source="=3" target="embeddingModelProvider.bedrock.maxRetries" />
+            <zeebe:input source="amazonManagedOpenSearchStore" target="vectorStore.storeType" />
+            <zeebe:input source="{{secrets.AWS_VECTOR_ACCESS}}" target="vectorStore.amazonManagedOpensearch.accessKey" />
+            <zeebe:input source="{{secrets.AWS_VECTOR_SECRET}}" target="vectorStore.amazonManagedOpensearch.secretKey" />
+            <zeebe:input source="{{secrets.AWS_LONGTERM_MEM}}" target="vectorStore.amazonManagedOpensearch.serverUrl" />
+            <zeebe:input source="{{secrets.AWS_REGION}}" target="vectorStore.amazonManagedOpensearch.region" />
+            <zeebe:input source="=&#34;tech-stuff-knowagebase&#34;" target="vectorStore.amazonManagedOpensearch.indexName" />
+            <zeebe:input source="PlainText" target="vectorDatabaseConnectorOperation.documentSource" />
+            <zeebe:input source="=toolCallResult.answerToQuestion" target="vectorDatabaseConnectorOperation.documentSourceFromProcessVariable" />
+            <zeebe:input source="recursiveDocumentSplitter" target="vectorDatabaseConnectorOperation.documentSplitter.splitterType" />
+            <zeebe:input source="=500" target="vectorDatabaseConnectorOperation.documentSplitter.maxSegmentSizeInChars" />
+            <zeebe:input source="=80" target="vectorDatabaseConnectorOperation.documentSplitter.maxOverlapSizeInChars" />
+          </zeebe:ioMapping>
+          <zeebe:taskHeaders>
+            <zeebe:header key="elementTemplateVersion" value="2" />
+            <zeebe:header key="elementTemplateId" value="io.camunda.connectors.EmbeddingsVectorDB.v1" />
+            <zeebe:header key="retryBackoff" value="PT0S" />
+          </zeebe:taskHeaders>
+        </bpmn:extensionElements>
+        <bpmn:incoming>Flow_1d4blt1</bpmn:incoming>
+      </bpmn:serviceTask>
+    </bpmn:adHocSubProcess>
+  </bpmn:process>
+  <bpmndi:BPMNDiagram id="BPMNDiagram_1">
+    <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="LongTermMemory">
+      <bpmndi:BPMNShape id="_BPMNShape_StartEvent_2" bpmnElement="StartEvent_1">
+        <dc:Bounds x="150" y="280" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="130" y="323" width="76" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_0k5z3dd_di" bpmnElement="Event_0k5z3dd">
+        <dc:Bounds x="1042" y="280" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1021" y="323" width="79" height="27" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_1pr0x0d_di" bpmnElement="Activity_0srpldl" isExpanded="true">
+        <dc:Bounds x="240" y="140" width="710" height="460" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_0e1q1j8_di" bpmnElement="Activity_1a744kr">
+        <dc:Bounds x="480" y="240" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_1f3ttrx_di" bpmnElement="Activity_0wyutvr">
+        <dc:Bounds x="300" y="240" width="100" height="80" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_103x5gh_di" bpmnElement="Activity_1ftg0az">
+        <dc:Bounds x="300" y="390" width="100" height="80" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_1mryd5x_di" bpmnElement="Activity_0i8mode">
+        <dc:Bounds x="480" y="390" width="100" height="80" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Gateway_1htoy4p_di" bpmnElement="Gateway_1htoy4p" isMarkerVisible="true">
+        <dc:Bounds x="635" y="405" width="50" height="50" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="619" y="381" width="81" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_0qhoybk_di" bpmnElement="Event_0qhoybk">
+        <dc:Bounds x="742" y="522" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_17my4xq_di" bpmnElement="Activity_1kck85z">
+        <dc:Bounds x="740" y="390" width="100" height="80" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_1t0lbun_di" bpmnElement="Event_13nfdh6">
+        <dc:Bounds x="352" y="452" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="Flow_1pan8av_di" bpmnElement="Flow_1pan8av">
+        <di:waypoint x="580" y="430" />
+        <di:waypoint x="635" y="430" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1d4blt1_di" bpmnElement="Flow_1d4blt1">
+        <di:waypoint x="685" y="430" />
+        <di:waypoint x="740" y="430" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="704" y="412" width="18" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0rgsv4i_di" bpmnElement="Flow_0rgsv4i">
+        <di:waypoint x="660" y="455" />
+        <di:waypoint x="660" y="540" />
+        <di:waypoint x="742" y="540" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="668" y="495" width="15" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0o3mwoy_di" bpmnElement="Flow_0o3mwoy">
+        <di:waypoint x="186" y="298" />
+        <di:waypoint x="240" y="298" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0nku61u_di" bpmnElement="Flow_0nku61u">
+        <di:waypoint x="950" y="298" />
+        <di:waypoint x="1042" y="298" />
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</bpmn:definitions>

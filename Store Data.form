@@ -1,0 +1,42 @@
+{
+  "executionPlatform": "Camunda Cloud",
+  "executionPlatformVersion": "8.8.0",
+  "exporter": {
+    "name": "Camunda Web Modeler",
+    "version": "4327945"
+  },
+  "schemaVersion": 19,
+  "id": "store-data-1jwrqpr",
+  "components": [
+    {
+      "text": "# What Data do you want to store\nYou can choose to store plain text, a document or both",
+      "type": "text",
+      "layout": {
+        "row": "Row_00c097e",
+        "columns": null
+      },
+      "id": "Field_0r6zl4r"
+    },
+    {
+      "label": "Text Data to Store",
+      "type": "textarea",
+      "layout": {
+        "row": "Row_0kfhbiv",
+        "columns": null
+      },
+      "id": "Field_0bzo06i",
+      "key": "textDataToStore"
+    },
+    {
+      "label": "Document To Store",
+      "type": "filepicker",
+      "layout": {
+        "row": "Row_0ziwb51",
+        "columns": null
+      },
+      "id": "Field_1t5l2z4",
+      "key": "documentToStore"
+    }
+  ],
+  "type": "default"
+}
