@@ -1,6 +1,6 @@
 # Long Term Memory Agent Example
 
-
+-![processModel](./img/process.png)
 
 This BPMN process model demonstrates how to build an AI-powered agent with long-term memory capabilities using Camunda. The agent is designed to answer client questions about tech products, learn from human interactions, and improve its knowledge over time.
 
