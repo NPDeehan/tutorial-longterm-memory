@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:zeebe="http://camunda.org/schema/zeebe/1.0" xmlns:modeler="http://camunda.org/schema/modeler/1.0" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="Definitions_1" targetNamespace="http://bpmn.io/schema/bpmn" exporter="Camunda Web Modeler" exporterVersion="4327945" modeler:executionPlatform="Camunda Cloud" modeler:executionPlatformVersion="8.8.0">
+  <bpmn:process id="StoreToMemory" name="Store Data to Longterm Memory" isExecutable="true">
+    <bpmn:startEvent id="StartEvent_1" name="Store Data">
+      <bpmn:extensionElements>
+        <zeebe:formDefinition formId="store-data-1jwrqpr" />
+      </bpmn:extensionElements>
+      <bpmn:outgoing>Flow_1xdvs7r</bpmn:outgoing>
+    </bpmn:startEvent>
+    <bpmn:sequenceFlow id="Flow_1xdvs7r" sourceRef="StartEvent_1" targetRef="Gateway_1kjlbfw" />
+    <bpmn:endEvent id="Event_0ur9a0b" name="Text Stored">
+      <bpmn:incoming>Flow_00ptynr</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:sequenceFlow id="Flow_00ptynr" sourceRef="Activity_07afnxh" targetRef="Event_0ur9a0b" />
+    <bpmn:serviceTask id="Activity_07afnxh" name="Store Text in long-term memory" zeebe:modelerTemplate="Template_144nwad" zeebe:modelerTemplateVersion="1" zeebe:modelerTemplateIcon="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTEyIiBoZWlnaHQ9IjUxMiIgdmlld0JveD0iMCAwIDUxMiA1MTIiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSI1MTIiIGhlaWdodD0iNTEyIiBmaWxsPSJ3aGl0ZSIgZmlsbC1vcGFjaXR5PSIwLjAxIiBzdHlsZT0ibWl4LWJsZW5kLW1vZGU6bXVsdGlwbHkiLz4KPHBhdGggZD0iTTI1NS45OTkgMTM2LjcwMkMxOTMuMzE4IDEzNi43MDIgMTI1Ljg1NSAxNTEuNDg1IDEyNS44NTUgMTgzLjkzM1YzOTYuNDc1QzEyNS44NTUgNDI4LjkyMyAxOTMuMzE4IDQ0My43MDcgMjU1Ljk5OSA0NDMuNzA3QzMxOC42NzkgNDQzLjcwNyAzODYuMTQyIDQyOC45MjMgMzg2LjE0MiAzOTYuNDc1VjE4My45MzNDMzg2LjE0MiAxNTEuNDg1IDMxOC42NzkgMTM2LjcwMiAyNTUuOTk5IDEzNi43MDJaTTI1NS45OTkgMTYwLjMxOEMzMjQuNTkxIDE2MC4zMTggMzYwLjA1MyAxNzcuMjUxIDM2Mi40NDIgMTgzLjkzM0MzNjAuMDUzIDE5MC42MTUgMzI0LjU5MSAyMDcuNTQ5IDI1NS45OTkgMjA3LjU0OUMxODYuODg5IDIwNy41NDkgMTUxLjQxOCAxOTAuMzYyIDE0OS41MTggMTg0LjE0MVYxODQuMDgzQzE1MS40MTggMTc3LjUwNSAxODYuODg5IDE2MC4zMTggMjU1Ljk5OSAxNjAuMzE4Wk0xNDkuNTE4IDIxMi41OTlDMTc0LjY5NCAyMjUuMjAzIDIxNi4yNzcgMjMxLjE2NSAyNTUuOTk5IDIzMS4xNjVDMjk1LjcyMSAyMzEuMTY1IDMzNy4zMDQgMjI1LjIwMyAzNjIuNDggMjEyLjU5OVYyNTQuNjMxQzM2MC41OCAyNjEuMjA5IDMyNS4xMDggMjc4LjM5NiAyNTUuOTk5IDI3OC4zOTZDMTg2Ljc4NSAyNzguMzk2IDE1MS4zMDMgMjYxLjE1NyAxNDkuNTE4IDI1NC43ODFWMjEyLjU5OVpNMTQ5LjUxOCAyODMuNDQ3QzE3NC42OTQgMjk2LjA1IDIxNi4yNzcgMzAyLjAxMiAyNTUuOTk5IDMwMi4wMTJDMjk1LjcyMSAzMDIuMDEyIDMzNy4zMDQgMjk2LjA1IDM2Mi40OCAyODMuNDQ3VjMyNS40NzhDMzYwLjU4IDMzMi4wNTYgMzI1LjEwOCAzNDkuMjQ0IDI1NS45OTkgMzQ5LjI0NEMxODYuNzg1IDM0OS4yNDQgMTUxLjMwMyAzMzIuMDA0IDE0OS41MTggMzI1LjYyOFYyODMuNDQ3Wk0yNTUuOTk5IDQyMC4wOTFDMTg2Ljc4NSA0MjAuMDkxIDE1MS4zMDMgNDAyLjg1MSAxNDkuNTE4IDM5Ni40NzVWMzU0LjI5NEMxNzQuNjk0IDM2Ni44OTggMjE2LjI3NyAzNzIuODU5IDI1NS45OTkgMzcyLjg1OUMyOTUuNzIxIDM3Mi44NTkgMzM3LjMwNCAzNjYuODk4IDM2Mi40OCAzNTQuMjk0VjM5Ni4zMjVDMzYwLjU4IDQwMi45MDMgMzI1LjEwOCA0MjAuMDkxIDI1NS45OTkgNDIwLjA5MVoiIGZpbGw9IiNGQzVEMEQiIHN0cm9rZT0iI0ZDNUQwRCIgc3Ryb2tlLXdpZHRoPSI2LjY3NDAyIi8+CjxwYXRoIGQ9Ik0zODcuODYgMzk5Ljg4M0wzNzQuNTMxIDQxMy4yMTFMNDQ2Ljg4NiA0ODUuNTY2SDM4NC4wNTJWNTA0LjYwN0g0NzkuMjU2VjQwOS40MDNINDYwLjIxNVY0NzIuMjM4TDM4Ny44NiAzOTkuODgzWiIgZmlsbD0iI0ZDNUQwRCIgc3Ryb2tlPSIjRkM1RDBEIiBzdHJva2Utd2lkdGg9IjguMzQyNTIiLz4KPHBhdGggZD0iTTEyNC4xMzggMzk5Ljg4M0wxMzcuNDY3IDQxMy4yMTFMNjUuMTExNiA0ODUuNTY2SDEyNy45NDZWNTA0LjYwN0gzMi43NDIyVjQwOS40MDNINTEuNzgzVjQ3Mi4yMzhMMTI0LjEzOCAzOTkuODgzWiIgZmlsbD0iI0ZDNUQwRCIgc3Ryb2tlPSIjRkM1RDBEIiBzdHJva2Utd2lkdGg9IjguMzQyNTIiLz4KPHBhdGggZD0iTTI0Ni41NzUgMTQ2LjA3MUgyNjUuNDI1VjQzLjc0NTNMMzA5Ljg1NiA4OC4xNzYxTDMyMy4zMTkgNzQuNzEyMkwyNTYgNy4zOTI4MkwxODguNjgxIDc0LjcxMjJMMjAyLjE0NCA4OC4xNzYxTDI0Ni41NzUgNDMuNzQ1M1YxNDYuMDcxWiIgZmlsbD0iI0ZDNUQwRCIgc3Ryb2tlPSIjRkM1RDBEIiBzdHJva2Utd2lkdGg9IjguMzQyNTIiLz4KPC9zdmc+Cg==">
+      <bpmn:extensionElements>
+        <zeebe:taskDefinition type="io.camunda:embeddings-vector-database:1" retries="0" />
+        <zeebe:ioMapping>
+          <zeebe:input source="embedDocumentOperation" target="vectorDatabaseConnectorOperation.operationType" />
+          <zeebe:input source="bedrockModelProvider" target="embeddingModelProvider.modelProvider" />
+          <zeebe:input source="{{secrets.AWS_ACCESS_KEY}}" target="embeddingModelProvider.bedrock.accessKey" />
+          <zeebe:input source="{{secrets.AWS_SECRET_KEY}}" target="embeddingModelProvider.bedrock.secretKey" />
+          <zeebe:input source="{{secrets.AWS_REGION}}" target="embeddingModelProvider.bedrock.region" />
+          <zeebe:input source="TitanEmbedTextV2" target="embeddingModelProvider.bedrock.modelName" />
+          <zeebe:input source="D1024" target="embeddingModelProvider.bedrock.dimensions" />
+          <zeebe:input source="=false" target="embeddingModelProvider.bedrock.normalize" />
+          <zeebe:input source="=3" target="embeddingModelProvider.bedrock.maxRetries" />
+          <zeebe:input source="amazonManagedOpenSearchStore" target="vectorStore.storeType" />
+          <zeebe:input source="{{secrets.AWS_VECTOR_ACCESS}}" target="vectorStore.amazonManagedOpensearch.accessKey" />
+          <zeebe:input source="{{secrets.AWS_VECTOR_SECRET}}" target="vectorStore.amazonManagedOpensearch.secretKey" />
+          <zeebe:input source="{{secrets.AWS_LONGTERM_MEM}}" target="vectorStore.amazonManagedOpensearch.serverUrl" />
+          <zeebe:input source="{{secrets.AWS_REGION}}" target="vectorStore.amazonManagedOpensearch.region" />
+          <zeebe:input source="=&#34;tech-stuff-knowagebase&#34;" target="vectorStore.amazonManagedOpensearch.indexName" />
+          <zeebe:input source="PlainText" target="vectorDatabaseConnectorOperation.documentSource" />
+          <zeebe:input source="=textDataToStore" target="vectorDatabaseConnectorOperation.documentSourceFromProcessVariable" />
+          <zeebe:input source="recursiveDocumentSplitter" target="vectorDatabaseConnectorOperation.documentSplitter.splitterType" />
+          <zeebe:input source="=500" target="vectorDatabaseConnectorOperation.documentSplitter.maxSegmentSizeInChars" />
+          <zeebe:input source="=80" target="vectorDatabaseConnectorOperation.documentSplitter.maxOverlapSizeInChars" />
+        </zeebe:ioMapping>
+        <zeebe:taskHeaders>
+          <zeebe:header key="elementTemplateVersion" value="2" />
+          <zeebe:header key="elementTemplateId" value="io.camunda.connectors.EmbeddingsVectorDB.v1" />
+          <zeebe:header key="retryBackoff" value="PT0S" />
+        </zeebe:taskHeaders>
+      </bpmn:extensionElements>
+      <bpmn:incoming>Flow_12n3ny3</bpmn:incoming>
+      <bpmn:outgoing>Flow_00ptynr</bpmn:outgoing>
+    </bpmn:serviceTask>
+    <bpmn:sequenceFlow id="Flow_12n3ny3" sourceRef="Gateway_1kjlbfw" targetRef="Activity_07afnxh">
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">=textDataToStore = ""</bpmn:conditionExpression>
+    </bpmn:sequenceFlow>
+    <bpmn:sequenceFlow id="Flow_1iq2ech" sourceRef="Gateway_1kjlbfw" targetRef="Activity_1h5cpe2">
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">=documentToStore != null</bpmn:conditionExpression>
+    </bpmn:sequenceFlow>
+    <bpmn:serviceTask id="Activity_1h5cpe2" name="Store Document in long-term memory" zeebe:modelerTemplate="Template_144nwad" zeebe:modelerTemplateVersion="1" zeebe:modelerTemplateIcon="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTEyIiBoZWlnaHQ9IjUxMiIgdmlld0JveD0iMCAwIDUxMiA1MTIiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSI1MTIiIGhlaWdodD0iNTEyIiBmaWxsPSJ3aGl0ZSIgZmlsbC1vcGFjaXR5PSIwLjAxIiBzdHlsZT0ibWl4LWJsZW5kLW1vZGU6bXVsdGlwbHkiLz4KPHBhdGggZD0iTTI1NS45OTkgMTM2LjcwMkMxOTMuMzE4IDEzNi43MDIgMTI1Ljg1NSAxNTEuNDg1IDEyNS44NTUgMTgzLjkzM1YzOTYuNDc1QzEyNS44NTUgNDI4LjkyMyAxOTMuMzE4IDQ0My43MDcgMjU1Ljk5OSA0NDMuNzA3QzMxOC42NzkgNDQzLjcwNyAzODYuMTQyIDQyOC45MjMgMzg2LjE0MiAzOTYuNDc1VjE4My45MzNDMzg2LjE0MiAxNTEuNDg1IDMxOC42NzkgMTM2LjcwMiAyNTUuOTk5IDEzNi43MDJaTTI1NS45OTkgMTYwLjMxOEMzMjQuNTkxIDE2MC4zMTggMzYwLjA1MyAxNzcuMjUxIDM2Mi40NDIgMTgzLjkzM0MzNjAuMDUzIDE5MC42MTUgMzI0LjU5MSAyMDcuNTQ5IDI1NS45OTkgMjA3LjU0OUMxODYuODg5IDIwNy41NDkgMTUxLjQxOCAxOTAuMzYyIDE0OS41MTggMTg0LjE0MVYxODQuMDgzQzE1MS40MTggMTc3LjUwNSAxODYuODg5IDE2MC4zMTggMjU1Ljk5OSAxNjAuMzE4Wk0xNDkuNTE4IDIxMi41OTlDMTc0LjY5NCAyMjUuMjAzIDIxNi4yNzcgMjMxLjE2NSAyNTUuOTk5IDIzMS4xNjVDMjk1LjcyMSAyMzEuMTY1IDMzNy4zMDQgMjI1LjIwMyAzNjIuNDggMjEyLjU5OVYyNTQuNjMxQzM2MC41OCAyNjEuMjA5IDMyNS4xMDggMjc4LjM5NiAyNTUuOTk5IDI3OC4zOTZDMTg2Ljc4NSAyNzguMzk2IDE1MS4zMDMgMjYxLjE1NyAxNDkuNTE4IDI1NC43ODFWMjEyLjU5OVpNMTQ5LjUxOCAyODMuNDQ3QzE3NC42OTQgMjk2LjA1IDIxNi4yNzcgMzAyLjAxMiAyNTUuOTk5IDMwMi4wMTJDMjk1LjcyMSAzMDIuMDEyIDMzNy4zMDQgMjk2LjA1IDM2Mi40OCAyODMuNDQ3VjMyNS40NzhDMzYwLjU4IDMzMi4wNTYgMzI1LjEwOCAzNDkuMjQ0IDI1NS45OTkgMzQ5LjI0NEMxODYuNzg1IDM0OS4yNDQgMTUxLjMwMyAzMzIuMDA0IDE0OS41MTggMzI1LjYyOFYyODMuNDQ3Wk0yNTUuOTk5IDQyMC4wOTFDMTg2Ljc4NSA0MjAuMDkxIDE1MS4zMDMgNDAyLjg1MSAxNDkuNTE4IDM5Ni40NzVWMzU0LjI5NEMxNzQuNjk0IDM2Ni44OTggMjE2LjI3NyAzNzIuODU5IDI1NS45OTkgMzcyLjg1OUMyOTUuNzIxIDM3Mi44NTkgMzM3LjMwNCAzNjYuODk4IDM2Mi40OCAzNTQuMjk0VjM5Ni4zMjVDMzYwLjU4IDQwMi45MDMgMzI1LjEwOCA0MjAuMDkxIDI1NS45OTkgNDIwLjA5MVoiIGZpbGw9IiNGQzVEMEQiIHN0cm9rZT0iI0ZDNUQwRCIgc3Ryb2tlLXdpZHRoPSI2LjY3NDAyIi8+CjxwYXRoIGQ9Ik0zODcuODYgMzk5Ljg4M0wzNzQuNTMxIDQxMy4yMTFMNDQ2Ljg4NiA0ODUuNTY2SDM4NC4wNTJWNTA0LjYwN0g0NzkuMjU2VjQwOS40MDNINDYwLjIxNVY0NzIuMjM4TDM4Ny44NiAzOTkuODgzWiIgZmlsbD0iI0ZDNUQwRCIgc3Ryb2tlPSIjRkM1RDBEIiBzdHJva2Utd2lkdGg9IjguMzQyNTIiLz4KPHBhdGggZD0iTTEyNC4xMzggMzk5Ljg4M0wxMzcuNDY3IDQxMy4yMTFMNjUuMTExNiA0ODUuNTY2SDEyNy45NDZWNTA0LjYwN0gzMi43NDIyVjQwOS40MDNINTEuNzgzVjQ3Mi4yMzhMMTI0LjEzOCAzOTkuODgzWiIgZmlsbD0iI0ZDNUQwRCIgc3Ryb2tlPSIjRkM1RDBEIiBzdHJva2Utd2lkdGg9IjguMzQyNTIiLz4KPHBhdGggZD0iTTI0Ni41NzUgMTQ2LjA3MUgyNjUuNDI1VjQzLjc0NTNMMzA5Ljg1NiA4OC4xNzYxTDMyMy4zMTkgNzQuNzEyMkwyNTYgNy4zOTI4MkwxODguNjgxIDc0LjcxMjJMMjAyLjE0NCA4OC4xNzYxTDI0Ni41NzUgNDMuNzQ1M1YxNDYuMDcxWiIgZmlsbD0iI0ZDNUQwRCIgc3Ryb2tlPSIjRkM1RDBEIiBzdHJva2Utd2lkdGg9IjguMzQyNTIiLz4KPC9zdmc+Cg==">
+      <bpmn:extensionElements>
+        <zeebe:taskDefinition type="io.camunda:embeddings-vector-database:1" retries="0" />
+        <zeebe:ioMapping>
+          <zeebe:input source="embedDocumentOperation" target="vectorDatabaseConnectorOperation.operationType" />
+          <zeebe:input source="bedrockModelProvider" target="embeddingModelProvider.modelProvider" />
+          <zeebe:input source="{{secrets.AWS_ACCESS_KEY}}" target="embeddingModelProvider.bedrock.accessKey" />
+          <zeebe:input source="{{secrets.AWS_SECRET_KEY}}" target="embeddingModelProvider.bedrock.secretKey" />
+          <zeebe:input source="{{secrets.AWS_REGION}}" target="embeddingModelProvider.bedrock.region" />
+          <zeebe:input source="TitanEmbedTextV2" target="embeddingModelProvider.bedrock.modelName" />
+          <zeebe:input source="D1024" target="embeddingModelProvider.bedrock.dimensions" />
+          <zeebe:input source="=false" target="embeddingModelProvider.bedrock.normalize" />
+          <zeebe:input source="=3" target="embeddingModelProvider.bedrock.maxRetries" />
+          <zeebe:input source="amazonManagedOpenSearchStore" target="vectorStore.storeType" />
+          <zeebe:input source="{{secrets.AWS_VECTOR_ACCESS}}" target="vectorStore.amazonManagedOpensearch.accessKey" />
+          <zeebe:input source="{{secrets.AWS_VECTOR_SECRET}}" target="vectorStore.amazonManagedOpensearch.secretKey" />
+          <zeebe:input source="{{secrets.AWS_LONGTERM_MEM}}" target="vectorStore.amazonManagedOpensearch.serverUrl" />
+          <zeebe:input source="{{secrets.AWS_REGION}}" target="vectorStore.amazonManagedOpensearch.region" />
+          <zeebe:input source="=&#34;tech-stuff-knowagebase&#34;" target="vectorStore.amazonManagedOpensearch.indexName" />
+          <zeebe:input source="CamundaDocument" target="vectorDatabaseConnectorOperation.documentSource" />
+          <zeebe:input source="=documentToStore" target="vectorDatabaseConnectorOperation.newDocuments" />
+          <zeebe:input source="recursiveDocumentSplitter" target="vectorDatabaseConnectorOperation.documentSplitter.splitterType" />
+          <zeebe:input source="=500" target="vectorDatabaseConnectorOperation.documentSplitter.maxSegmentSizeInChars" />
+          <zeebe:input source="=80" target="vectorDatabaseConnectorOperation.documentSplitter.maxOverlapSizeInChars" />
+        </zeebe:ioMapping>
+        <zeebe:taskHeaders>
+          <zeebe:header key="elementTemplateVersion" value="2" />
+          <zeebe:header key="elementTemplateId" value="io.camunda.connectors.EmbeddingsVectorDB.v1" />
+          <zeebe:header key="retryBackoff" value="PT0S" />
+        </zeebe:taskHeaders>
+      </bpmn:extensionElements>
+      <bpmn:incoming>Flow_1iq2ech</bpmn:incoming>
+      <bpmn:outgoing>Flow_0grpcg7</bpmn:outgoing>
+    </bpmn:serviceTask>
+    <bpmn:endEvent id="Event_0g5liut" name="Document Stored">
+      <bpmn:incoming>Flow_0grpcg7</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:sequenceFlow id="Flow_0grpcg7" sourceRef="Activity_1h5cpe2" targetRef="Event_0g5liut" />
+    <bpmn:inclusiveGateway id="Gateway_1kjlbfw" default="Flow_1uum48l">
+      <bpmn:incoming>Flow_1xdvs7r</bpmn:incoming>
+      <bpmn:outgoing>Flow_12n3ny3</bpmn:outgoing>
+      <bpmn:outgoing>Flow_1iq2ech</bpmn:outgoing>
+      <bpmn:outgoing>Flow_1uum48l</bpmn:outgoing>
+    </bpmn:inclusiveGateway>
+    <bpmn:endEvent id="Event_1bne9lo" name="Store Nothing">
+      <bpmn:incoming>Flow_1uum48l</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:sequenceFlow id="Flow_1uum48l" sourceRef="Gateway_1kjlbfw" targetRef="Event_1bne9lo" />
+  </bpmn:process>
+  <bpmndi:BPMNDiagram id="BPMNDiagram_1">
+    <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="StoreToMemory">
+      <bpmndi:BPMNShape id="_BPMNShape_StartEvent_2" bpmnElement="StartEvent_1">
+        <dc:Bounds x="150" y="100" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="142" y="143" width="53" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_0ur9a0b_di" bpmnElement="Event_0ur9a0b">
+        <dc:Bounds x="482" y="100" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="472" y="143" width="56" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_0gs1ikm_di" bpmnElement="Activity_07afnxh">
+        <dc:Bounds x="320" y="78" width="100" height="80" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_1e5cckr_di" bpmnElement="Activity_1h5cpe2">
+        <dc:Bounds x="320" y="190" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_0g5liut_di" bpmnElement="Event_0g5liut">
+        <dc:Bounds x="482" y="212" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="457" y="255" width="86" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Gateway_02mtxjx_di" bpmnElement="Gateway_1kjlbfw">
+        <dc:Bounds x="215" y="93" width="50" height="50" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_1bne9lo_di" bpmnElement="Event_1bne9lo">
+        <dc:Bounds x="352" y="322" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="336" y="365" width="68" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="Flow_1xdvs7r_di" bpmnElement="Flow_1xdvs7r">
+        <di:waypoint x="186" y="118" />
+        <di:waypoint x="215" y="118" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_00ptynr_di" bpmnElement="Flow_00ptynr">
+        <di:waypoint x="420" y="118" />
+        <di:waypoint x="482" y="118" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_12n3ny3_di" bpmnElement="Flow_12n3ny3">
+        <di:waypoint x="265" y="118" />
+        <di:waypoint x="320" y="118" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1iq2ech_di" bpmnElement="Flow_1iq2ech">
+        <di:waypoint x="240" y="143" />
+        <di:waypoint x="240" y="230" />
+        <di:waypoint x="320" y="230" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0grpcg7_di" bpmnElement="Flow_0grpcg7">
+        <di:waypoint x="420" y="230" />
+        <di:waypoint x="482" y="230" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1uum48l_di" bpmnElement="Flow_1uum48l">
+        <di:waypoint x="240" y="143" />
+        <di:waypoint x="240" y="340" />
+        <di:waypoint x="352" y="340" />
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</bpmn:definitions>

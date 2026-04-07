@@ -1,0 +1,32 @@
+{
+  "executionPlatform": "Camunda Cloud",
+  "executionPlatformVersion": "8.8.0",
+  "exporter": {
+    "name": "Camunda Web Modeler",
+    "version": "6fa43d2"
+  },
+  "schemaVersion": 19,
+  "id": "review-case-resolution-skadfa",
+  "components": [
+    {
+      "text": "=complete_summary",
+      "type": "text",
+      "layout": {
+        "row": "Row_0r6kizb",
+        "columns": null
+      },
+      "id": "Field_1slocit"
+    },
+    {
+      "label": "Tick to Store in Longterm Memory",
+      "type": "checkbox",
+      "layout": {
+        "row": "Row_0y0n1j5",
+        "columns": null
+      },
+      "id": "Field_184xuvy",
+      "key": "storeInMemory"
+    }
+  ],
+  "type": "default"
+}
